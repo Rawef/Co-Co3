@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7ef3f7b0-106e-4767-a6a7-4bbe453b2c8f" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2crWspNUEby4apoAOB3vovdE4U5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/amadd/OneDrive/Desktop/Co-Co2-main/Back&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;b728effc01fdfbf0091b2c85e7568860&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.testeditions.Services" />
+      <recent name="com.example.testeditions.Repositories" />
+      <recent name="com.example.testeditions.Entites" />
+      <recent name="com.example.testeditions.Controllers" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="TestEditioNsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="testEDITIONs" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.testeditions.TestEditioNsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7ef3f7b0-106e-4767-a6a7-4bbe453b2c8f" name="Changes" comment="" />
+      <created>1708870387049</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708870387049</updated>
+      <workItem from="1708870388456" duration="2039000" />
+      <workItem from="1708874500114" duration="20000" />
+      <workItem from="1708874732978" duration="623000" />
+      <workItem from="1708941986118" duration="22000" />
+      <workItem from="1708947505910" duration="1256000" />
+      <workItem from="1708970756601" duration="8055000" />
+      <workItem from="1708986890507" duration="611000" />
+      <workItem from="1708998938550" duration="313000" />
+      <workItem from="1709003801573" duration="965000" />
+      <workItem from="1709015012448" duration="2145000" />
+      <workItem from="1709023446654" duration="664000" />
+      <workItem from="1709031041262" duration="879000" />
+      <workItem from="1709569005218" duration="7094000" />
+      <workItem from="1709631894874" duration="4587000" />
+      <workItem from="1709998361475" duration="1352000" />
+      <workItem from="1710071801545" duration="1591000" />
+      <workItem from="1710073415456" duration="523000" />
+      <workItem from="1710074051909" duration="1423000" />
+      <workItem from="1710093213150" duration="4368000" />
+      <workItem from="1710110020666" duration="9603000" />
+      <workItem from="1710200778744" duration="3098000" />
+      <workItem from="1710230142783" duration="6656000" />
+      <workItem from="1710289297195" duration="5256000" />
+      <workItem from="1710336671917" duration="3960000" />
+      <workItem from="1710369745157" duration="7514000" />
+      <workItem from="1710982651518" duration="8755000" />
+      <workItem from="1711067560735" duration="3930000" />
+      <workItem from="1711239362929" duration="2879000" />
+      <workItem from="1711328498587" duration="5270000" />
+      <workItem from="1711378332445" duration="7122000" />
+      <workItem from="1711407134673" duration="18833000" />
+      <workItem from="1711463056900" duration="7798000" />
+      <workItem from="1711486015956" duration="10957000" />
+      <workItem from="1711565721733" duration="4180000" />
+      <workItem from="1711571552754" duration="258000" />
+      <workItem from="1711577943003" duration="6431000" />
+      <workItem from="1711587673323" duration="4815000" />
+      <workItem from="1711653100723" duration="6765000" />
+      <workItem from="1711677375864" duration="8004000" />
+      <workItem from="1711761265834" duration="117000" />
+      <workItem from="1711761412014" duration="161000" />
+      <workItem from="1711764973812" duration="543000" />
+      <workItem from="1711780746199" duration="3713000" />
+      <workItem from="1711840888442" duration="16188000" />
+      <workItem from="1711918247536" duration="12742000" />
+      <workItem from="1711946449996" duration="1174000" />
+      <workItem from="1712007108138" duration="5714000" />
+      <workItem from="1712018575751" duration="1058000" />
+      <workItem from="1712021505576" duration="15230000" />
+      <workItem from="1712044761663" duration="5711000" />
+      <workItem from="1712176987314" duration="7756000" />
+      <workItem from="1713258253301" duration="2603000" />
+      <workItem from="1713266006192" duration="17000" />
+      <workItem from="1713271854659" duration="3340000" />
+      <workItem from="1713645164601" duration="2940000" />
+      <workItem from="1713685418037" duration="3897000" />
+      <workItem from="1713709024121" duration="6154000" />
+      <workItem from="1713728518788" duration="7787000" />
+      <workItem from="1713788848296" duration="7781000" />
+      <workItem from="1713805735065" duration="1871000" />
+      <workItem from="1713808304614" duration="697000" />
+      <workItem from="1713825351768" duration="1483000" />
+      <workItem from="1713865227836" duration="917000" />
+      <workItem from="1713867212825" duration="3695000" />
+      <workItem from="1713876253576" duration="3851000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
