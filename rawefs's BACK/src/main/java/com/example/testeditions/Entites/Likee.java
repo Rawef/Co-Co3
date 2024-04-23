@@ -1,7 +1,6 @@
 package com.example.testeditions.Entites;
 
-
-
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -14,8 +13,12 @@ import lombok.*;
 public class Likee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long IdPost;
+    private Long id;
     private  StateLike stateLike;
+    @JsonIgnore
     @ManyToOne
     Post post;
+    @JsonIgnore
+    @ManyToOne
+    User user;
 }

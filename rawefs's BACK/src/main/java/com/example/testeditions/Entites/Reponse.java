@@ -1,13 +1,10 @@
 package com.example.testeditions.Entites;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
-
 @Getter
 @Setter
 @ToString
@@ -16,9 +13,13 @@ import java.time.LocalDateTime;
 @Entity
 public class Reponse {
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue (strategy= GenerationType.IDENTITY)
     private int id_reponse;
 
     private String description_reponse;
     private LocalDateTime date_reponse;
+    @JsonIgnore
+    @ManyToOne
+    @JoinColumn(name = "id_reclamation")
+    private Reclamation reclamation;
 }

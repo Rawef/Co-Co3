@@ -1,13 +1,10 @@
 package com.example.testeditions.Entites;
 
-
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Date;
-import java.util.List;
 
 @Entity
 @Getter
@@ -15,18 +12,19 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-
-public class Post {
+public class LikeDislike {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long IdPost;
-    private String DescriptionPost;
-    private Date DatePost;
+    private Long id;
+
+
+
+    private Date timestamp;
+    private MatchStatus matchStatus; // Vous pouvez utiliser une énumération pour définir le type de like/dislike
     @ManyToOne
-    User user;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy="post")
-    private List<Likee> Likes;
+    private User user;
     @JsonIgnore
-    @OneToMany(cascade = CascadeType.ALL, mappedBy="post")
-    private List<Comment> Comments;
+    @ManyToOne
+    private Profil profil;
+    // Getters and setters
 }

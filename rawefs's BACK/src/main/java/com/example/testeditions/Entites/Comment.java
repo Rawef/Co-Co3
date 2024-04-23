@@ -1,33 +1,30 @@
 package com.example.testeditions.Entites;
 
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.Date;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "Comment")
+@AllArgsConstructor
+@ToString
+
 public class Comment {
-
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private long id;
-
-    private String content;
-    @Temporal(TemporalType.DATE)
-    private Date date_com;
-    @Column(name = "likee")
-    private int llike;
-    @Column(name = "dislikee")
-    private int dislike;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long IdComment;
+    private  String description_comment;
+    private Date DateComment;
+    @JsonIgnore
     @ManyToOne
-    AnnonceColocation annoncecolocation;
+    Post post;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy="comment")
+    private List<ResponseComment> ResponseComments;}
 
-}

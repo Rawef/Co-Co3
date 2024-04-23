@@ -5,20 +5,25 @@ import lombok.*;
 
 import java.util.Date;
 
+
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class ResponseComment {
+public class Matchs {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    private Long IdResponseComment;
-    private  String DescriptionResponseComment;
-    private Date DateResponseComment;
     @ManyToOne
-    Comment comment;
+    private User user1;
 
+    @ManyToOne
+    private User user2;
+
+    private Date timestamp;
+
+    // Getters and setters
 }

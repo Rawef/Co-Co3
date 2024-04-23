@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let profile of profiles">
+      <div class="card">
+        
+        <img [src]="profile.image" class="card-img-top" alt="Profile Image">
+        <div class="card-body">
+          <h5 class="card-title">{{ profile.description }}</h5>
+          <p class="card-text">Age: {{ profile.age }}</p>
+          <p class="card-text">Localisation: {{ profile.localisation }}</p>
+          <button class="like-button" (click)="saveLikeDislike(true, 5, profile.id)">
+          Like
+        </button>
+        <button class="dislike-button" (click)="saveLikeDislike(false, 5, profile.id)">
+          Dislike
+        </button>
+          <!-- Ajoutez d'autres informations du profil ici selon vos besoins -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

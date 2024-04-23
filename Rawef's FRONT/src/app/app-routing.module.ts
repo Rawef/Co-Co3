@@ -19,6 +19,11 @@ import { MesAnnoncesComponent } from './annoceColoc/mes-annonces/mes-annonces.co
 import { AnnoceColocViewComponent } from './annoceColoc/annoce-coloc-view/annoce-coloc-view.component';
 import { UpdateAnnonceColocComponent } from './annoceColoc/update-annonce-coloc/update-annonce-coloc.component';
 import { CreateReservationColocComponent } from './reservation/create-reservation-coloc/create-reservation-coloc.component';
+import { AjoutComponent } from './reclamation/components/ajout/ajout.component';
+import { PostComponent } from './forum/components/post/post.component';
+import { AfficherpostComponent } from './forum/components/afficherpost/afficherpost.component';
+import { ConsulterComponent } from './reclamation/components/consulter/consulter.component';
+import { TinderComponent } from './tinder/tinder/tinder.component';
 
 const routes: Routes = [
 
@@ -38,7 +43,17 @@ const routes: Routes = [
   { path: "annoncesColoc/:id", component: UpdateAnnonceColocComponent }, // Utilisez le bon nom de composant
   { path: "annoncesColoc/view/:id/reservationColoc", component: CreateReservationColocComponent }, // Utilisez le bon nom de composant
 
+  {path:"ajoutrecl" , component:AjoutComponent},
+  {path:"affichrecl" , component:AfficherComponent},
+  {path:"ajoutpost" , component:PostComponent},
 
+  {path:"affichpost" , component:AfficherpostComponent},
+  {path:"consult" , component:ConsulterComponent},
+  {path:"tinder" , component:TinderComponent},
+
+
+
+  {path:"chatbot" , component:ChatbotComponent},
 
   {path:"aboutus" , component:StatsComponent},
   { path: '', redirectTo: '/login', pathMatch: 'full' },
