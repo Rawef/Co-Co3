@@ -29,6 +29,7 @@ import { UpdateAnnonceColocComponent } from './annoceColoc/update-annonce-coloc/
 import { RouterModule } from '@angular/router';
 import { CreateReservationColocComponent } from './reservation/create-reservation-coloc/create-reservation-coloc.component';
 
+
 const config: SocketIoConfig = { url: 'http://localhost:8089', options: {} };
 
 
@@ -65,7 +66,7 @@ const config: SocketIoConfig = { url: 'http://localhost:8089', options: {} };
     SocketIoModule.forRoot(config),
     ReactiveFormsModule,  // Importez ReactiveFormsModule ici
     RouterModule.forRoot([]), // Configuration de RouterModule dans AppModule
-    RouterModule // Assurez-vous d'importer RouterModule ici
+    RouterModule, // Assurez-vous d'importer RouterModule ici
     
     
      

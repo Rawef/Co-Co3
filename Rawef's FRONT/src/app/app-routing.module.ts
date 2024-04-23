@@ -19,6 +19,7 @@ import { AnnoceColocViewComponent } from './annoceColoc/annoce-coloc-view/annoce
 import { UpdateAnnonceColocComponent } from './annoceColoc/update-annonce-coloc/update-annonce-coloc.component';
 import { CreateReservationColocComponent } from './reservation/create-reservation-coloc/create-reservation-coloc.component';
 
+
 const routes: Routes = [
 
   {path:"home" , component:HomeComponent},
@@ -43,7 +44,7 @@ const routes: Routes = [
   {path:"preferances" , component:PreferancesComponent},
   //{path:"**",redirectTo:"home" ,pathMatch:"full"} 
 
-  
+ 
   
   
 ];
