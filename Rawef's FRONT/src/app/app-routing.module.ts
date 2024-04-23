@@ -13,7 +13,12 @@ import { SetPasswordComponent } from './login/component/set-password/set-passwor
 import { DashboardComponent } from './backoffice/components/dashboard/dashboard.component';
 import { AfficherComponent } from './colocation/components/afficher/afficher.component';
 import { ChatComponent } from './chat/components/chat/chat.component';
-
+import { AnnonceColocListComponent } from './annoceColoc/annonce-coloc-list/annonce-coloc-list.component';
+import { CreateAnnonceColocComponent } from './annoceColoc/create-annonce-coloc/create-annonce-coloc.component';
+import { MesAnnoncesComponent } from './annoceColoc/mes-annonces/mes-annonces.component';
+import { AnnoceColocViewComponent } from './annoceColoc/annoce-coloc-view/annoce-coloc-view.component';
+import { UpdateAnnonceColocComponent } from './annoceColoc/update-annonce-coloc/update-annonce-coloc.component';
+import { CreateReservationColocComponent } from './reservation/create-reservation-coloc/create-reservation-coloc.component';
 
 const routes: Routes = [
 
@@ -26,6 +31,12 @@ const routes: Routes = [
   {path:"login" , component:LoginComponent},
   {path:"annonceCol" , component:AfficherComponent},
   { path: 'chat/:userId', component: ChatComponent },
+  { path: "annoncesColoc", component: AnnonceColocListComponent }, // Utilisez le bon nom de composant
+  { path: "annoncesColoc/add", component: CreateAnnonceColocComponent }, // Utilisez le bon nom de composant
+  { path: "annoncesColoc/mesannonces", component: MesAnnoncesComponent }, // Utilisez le bon nom de composant
+  { path: "annoncesColoc/view/:id", component: AnnoceColocViewComponent }, // Utilisez le bon nom de composant
+  { path: "annoncesColoc/:id", component: UpdateAnnonceColocComponent }, // Utilisez le bon nom de composant
+  { path: "annoncesColoc/view/:id/reservationColoc", component: CreateReservationColocComponent }, // Utilisez le bon nom de composant
 
 
 

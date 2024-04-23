@@ -22,7 +22,11 @@ import { MessagesModule } from 'primeng/messages';
 import { ButtonModule } from 'primeng/button';
 import { CommonModule } from '@angular/common';
 import { ChatModule } from './chat/chat.module';
-
+import { AnnonceColocListComponent } from './annoceColoc/annonce-coloc-list/annonce-coloc-list.component';
+import { CreateAnnonceColocComponent } from './annoceColoc/create-annonce-coloc/create-annonce-coloc.component';
+import { MesAnnoncesComponent } from './annoceColoc/mes-annonces/mes-annonces.component';
+import { AnnoceColocViewComponent } from './annoceColoc/annoce-coloc-view/annoce-coloc-view.component';
+import { UpdateAnnonceColocComponent } from './annoceColoc/update-annonce-coloc/update-annonce-coloc.component';
 
 const config: SocketIoConfig = { url: 'http://localhost:8089', options: {} };
 
@@ -31,6 +35,12 @@ const config: SocketIoConfig = { url: 'http://localhost:8089', options: {} };
 @NgModule({
   declarations: [
     AppComponent,
+    AnnonceColocListComponent,
+    CreateAnnonceColocComponent,
+    MesAnnoncesComponent,
+    AnnoceColocViewComponent,
+    UpdateAnnonceColocComponent,
+    CreateReservationColocComponent,
     
     
   ],
@@ -52,6 +62,10 @@ const config: SocketIoConfig = { url: 'http://localhost:8089', options: {} };
     ChatModule,
     SocketIoModule.forRoot(config),
     OAuthModule.forRoot(),
+    SocketIoModule.forRoot(config),
+    ReactiveFormsModule,  // Importez ReactiveFormsModule ici
+    RouterModule.forRoot([]), // Configuration de RouterModule dans AppModule
+    RouterModule // Assurez-vous d'importer RouterModule ici
     
     
      
