@@ -76,6 +76,10 @@ public class User {
     @OneToMany(cascade = CascadeType.ALL, mappedBy="user")
     private List<Subscription> subscriptions;
 
+    @JsonIgnore
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private List<Certification> certifications;
+
 
     public boolean isVerified() {
         return verified;
@@ -84,4 +88,17 @@ public class User {
     public void setVerified(boolean verified) {
         this.verified = verified;
     }
+
+
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private List<Ticket> tickets;
+
+    // Define the getter method for tickets
+    public List<Ticket> getTickets() {
+        return tickets;
+
+    }
 }
+
