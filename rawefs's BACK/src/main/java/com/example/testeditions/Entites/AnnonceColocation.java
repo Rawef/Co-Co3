@@ -20,7 +20,7 @@ public class AnnonceColocation implements Serializable {
     private Long id;
     private String titre;
     private String adresse;
-    private int nbr_chambres;
+    private int nbrChambres;
     private int superficie;
     @Enumerated(EnumType.STRING)
     private TypeLocal type;
@@ -33,18 +33,19 @@ public class AnnonceColocation implements Serializable {
     private int dislike;
     private int llike;
     private int nombreVues;
+    private prefBinome prefB;
 
 
     @JsonIgnore
-    @OneToMany(cascade = CascadeType.ALL)
+   @OneToMany(cascade = CascadeType.ALL)
     private List<Contract> contracts;
 
     @OneToMany(mappedBy = "annoncecolocation", cascade = CascadeType.ALL)
     private List<Preferences> preferences;
-
+    @JsonIgnore
     @ManyToOne
     User user;
-
+    @JsonIgnore
     @OneToMany(cascade = CascadeType.ALL, mappedBy="annoncecolocation")
     private List<ReservationColoc> reservationColocs;
 

@@ -1,8 +1,10 @@
 package com.example.testeditions.Services;
 
 import com.example.testeditions.Entites.AnnonceColocation;
+import com.example.testeditions.Entites.User;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 public interface AnnonceColocationService {
@@ -19,5 +21,8 @@ public interface AnnonceColocationService {
     List<AnnonceColocation> getAnnoncesByUserId(Long userId);
 
     public List<AnnonceColocation> getAnnoncesSelonPreferences(Long userId);
+    public List<AnnonceColocation> getuserannonce(User user);
+    public Map<Long, Float> getReservationPercentageByAnnonce() ;
 
-}
+
+    }
