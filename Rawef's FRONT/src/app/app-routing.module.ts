@@ -11,7 +11,6 @@ import { ProfileComponent } from './login/component/profile/profile.component';
 import { UpdateComponent } from './login/component/update/update.component';
 import { SetPasswordComponent } from './login/component/set-password/set-password.component';
 import { DashboardComponent } from './backoffice/components/dashboard/dashboard.component';
-import { AfficherComponent } from './colocation/components/afficher/afficher.component';
 import { ChatComponent } from './chat/components/chat/chat.component';
 import { AnnonceColocListComponent } from './annoceColoc/annonce-coloc-list/annonce-coloc-list.component';
 import { CreateAnnonceColocComponent } from './annoceColoc/create-annonce-coloc/create-annonce-coloc.component';
@@ -25,6 +24,7 @@ import { AfficherpostComponent } from './forum/components/afficherpost/afficherp
 import { ConsulterComponent } from './reclamation/components/consulter/consulter.component';
 import { TinderComponent } from './tinder/tinder/tinder.component';
 
+
 const routes: Routes = [
 
   {path:"home" , component:HomeComponent},
@@ -34,7 +34,6 @@ const routes: Routes = [
   {path:"password" , component:SetPasswordComponent},
   {path:"back" , component:DashboardComponent},
   {path:"login" , component:LoginComponent},
-  {path:"annonceCol" , component:AfficherComponent},
   { path: 'chat/:userId', component: ChatComponent },
   { path: "annoncesColoc", component: AnnonceColocListComponent }, // Utilisez le bon nom de composant
   { path: "annoncesColoc/add", component: CreateAnnonceColocComponent }, // Utilisez le bon nom de composant
@@ -60,7 +59,7 @@ const routes: Routes = [
   {path:"preferances" , component:PreferancesComponent},
   //{path:"**",redirectTo:"home" ,pathMatch:"full"} 
 
-  
+ 
   
   
 ];
