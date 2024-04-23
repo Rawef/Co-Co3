@@ -606,6 +606,11 @@ section h2 {
     width: 50%;
     text-align: center;
 }
+.description-container {
+    width: 249px; /* Adjust the minimum height as needed */
+    height: 185px;
+  }
+  
 
 
 .btn-group {
@@ -1428,5 +1433,45 @@ body {
     }
   }
 
+  a.card{
+    width: 13em !important;
+    height: 17em !important;
+  }
+
+ /* Add this CSS to your component's stylesheet */
+
+form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
   
- 
+  label {
+    width: 100px; /* Adjust the width based on your design */
+    text-align: right;
+    margin-bottom: 0;
+  }
+  
+  input, select {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
