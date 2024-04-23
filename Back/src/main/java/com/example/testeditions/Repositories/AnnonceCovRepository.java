@@ -11,6 +11,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @Repository
@@ -25,11 +26,11 @@ public interface AnnonceCovRepository extends JpaRepository<AnnonceCov,Long> {
     @Query("DELETE FROM AnnonceCov a WHERE a.ida = :ida AND a.user.id = :userId")
     void deleteByIdaAndUserId(@Param("ida") Long ida, @Param("userId") Long userId);
 
-
      AnnonceCov findByUserIdAndIda(Long userId, Long ida);
-
 
     long countByStatus(String status);
 
+    @Query("SELECT CAST(c.dateDepart AS LocalDate) as day, COUNT(c) as count FROM AnnonceCov c GROUP BY day ORDER BY day")
+    List<Map<String, Object>> countAnnoncesByDay();
 
 }

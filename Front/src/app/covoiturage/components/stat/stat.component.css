@@ -1,32 +1,33 @@
-
-.bar-chart .eje-x li:nth-child(7):before {
-  background: #15BFCC;  
-  height: 520%;
+.large-chart-container {
+  width: 300px; /* Size of the donut chart container */
+  height: 300px; /* Size of the donut chart container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.pie-chart {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .legend {
-    display: flex;
-    justify-content: center;
-    margin-top: 1em;
-  }
-  
-  .legend-item {
-    display: flex;
-    align-items: center;
-    margin-right: 1em;
-  }
-  
-  .legend-color {
-    width: 20px;
-    height: 20px;
-    margin-right: 0.5em;
-    border: 1px solid #000;
-  }
-  
 
+.chart-and-legend {
+  display: flex; 
+  flex-direction: row; 
+  align-items: flex-start; 
+}
 
+.legend {
+  display: flex; 
+  flex-direction: column;
+  justify-content: flex-start; 
+  margin-right: 16px; 
+}
+
+.legend-item {
+  display: flex; 
+  align-items: center; 
+  margin-bottom: 10px;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%; 
+  margin-right: 8px; 
+}

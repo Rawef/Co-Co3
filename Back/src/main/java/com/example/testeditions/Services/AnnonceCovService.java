@@ -4,7 +4,9 @@ import com.example.testeditions.Entites.AnnonceCov;
 import com.example.testeditions.Entites.User;
 import com.example.testeditions.Entites.Voiture;
 
+import java.time.LocalDate;
 import java.util.List;
+import java.util.Map;
 
 public interface AnnonceCovService {
 
@@ -30,5 +32,6 @@ public interface AnnonceCovService {
 
     void updateAnnouncementStatus();
 
+    Map<LocalDate, Long> getAnnonceCountsPerDay();
 }
 

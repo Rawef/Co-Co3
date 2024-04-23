@@ -10,7 +10,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { DetailedAnnonceComponent } from './components/detailed-annonce/detailed-annonce.component';
 import { MesannoncesComponent } from './components/mesannonces/mesannonces.component';
 import { ReservationComponent } from './components/reservation/reservation.component';
-import { StatisticsComponent } from './components/statistics/statistics.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { BackannonceComponent } from './components/backannonce/backannonce.component';
@@ -23,6 +22,9 @@ import { BackvoitureComponent } from './components/backvoiture/backvoiture.compo
 import { BackupdatevoitureComponent } from './components/backupdatevoiture/backupdatevoiture.component';
 import { BackcommentComponent } from './components/backcomment/backcomment.component';
 import { NotificationComponent } from './components/notification/notification.component';
+import { StatisComponent } from './components/statis/statis.component';
+
+
 
 @NgModule({
   declarations: [
@@ -33,7 +35,6 @@ import { NotificationComponent } from './components/notification/notification.co
     MesannoncesComponent,
     DetailedAnnonceComponent,
     ReservationComponent,
-    StatisticsComponent,
     DashboardComponent,
     BackannonceComponent,
     BackupdateannonceComponent,
@@ -45,6 +46,7 @@ import { NotificationComponent } from './components/notification/notification.co
     BackupdatevoitureComponent,
     BackcommentComponent,
     NotificationComponent,
+    StatisComponent,
   ],
   imports: [
     CommonModule,
@@ -52,7 +54,8 @@ import { NotificationComponent } from './components/notification/notification.co
     ReactiveFormsModule,
     HttpClientModule,
     NgxChartsModule,
-    RouterModule
+    RouterModule,
+
   
   ],
   exports:[
@@ -63,7 +66,6 @@ import { NotificationComponent } from './components/notification/notification.co
     MesannoncesComponent,
     DetailedAnnonceComponent,
     ReservationComponent,
-    StatisticsComponent,
     DashboardComponent,
     BackannonceComponent,
     BackupdateannonceComponent,
@@ -75,6 +77,8 @@ import { NotificationComponent } from './components/notification/notification.co
     BackupdatevoitureComponent,
     BackcommentComponent,
     NotificationComponent,
+    StatisComponent,
+
   ],
 
 })
