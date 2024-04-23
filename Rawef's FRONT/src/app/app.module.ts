@@ -27,6 +27,8 @@ import { CreateAnnonceColocComponent } from './annoceColoc/create-annonce-coloc/
 import { MesAnnoncesComponent } from './annoceColoc/mes-annonces/mes-annonces.component';
 import { AnnoceColocViewComponent } from './annoceColoc/annoce-coloc-view/annoce-coloc-view.component';
 import { UpdateAnnonceColocComponent } from './annoceColoc/update-annonce-coloc/update-annonce-coloc.component';
+import { RouterModule } from '@angular/router';
+import { CreateReservationColocComponent } from './reservation/create-reservation-coloc/create-reservation-coloc.component';
 
 const config: SocketIoConfig = { url: 'http://localhost:8089', options: {} };
 
