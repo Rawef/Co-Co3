@@ -1,12 +1,15 @@
 package com.example.testeditions.Controllers;
 
 import com.example.testeditions.Entites.AnnonceColocation;
+import com.example.testeditions.Entites.User;
+import com.example.testeditions.Repositories.UserRepository;
 import com.example.testeditions.Services.AnnonceColocationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @RestController
@@ -15,7 +18,8 @@ public class AnnonceColocationController {
 
     @Autowired
     private AnnonceColocationService annonceColocationService;
-
+    @Autowired
+    private UserRepository userRepository;
     @GetMapping
     public List<AnnonceColocation> getAllAnnonces() {
         return annonceColocationService.getAllAnnonces();
@@ -34,10 +38,13 @@ public class AnnonceColocationController {
         }
     }
 
-    @PostMapping
-    public ResponseEntity<AnnonceColocation> createAnnonce(@RequestBody AnnonceColocation annonceColocation) {
-        AnnonceColocation createdAnnonce = annonceColocationService.createAnnonce(annonceColocation);
-        return ResponseEntity.status(HttpStatus.CREATED).body(createdAnnonce);
+    @PostMapping("/ajout")
+    public ResponseEntity<AnnonceColocation> createAnnonce(@RequestBody AnnonceColocation annonceColocation,@RequestParam Long id) {
+        User user=userRepository.findById(id).get();
+        annonceColocation.setUser(user);
+
+        AnnonceColocation annonceColocation1 = annonceColocationService.createAnnonce(annonceColocation);
+        return ResponseEntity.status(HttpStatus.CREATED).body(annonceColocation1);
     }
 
     @PutMapping("/{id}")
@@ -65,4 +72,18 @@ public class AnnonceColocationController {
     public List<AnnonceColocation> getannonceprefernces(@PathVariable Long userId){
         return annonceColocationService.getAnnoncesSelonPreferences(userId);
     }
+    @GetMapping("/userannonces/{id}")
+    public List<AnnonceColocation> getannoncebyuser(@PathVariable Long id){
+        User user = userRepository.findById(id).get();
+        List<AnnonceColocation> annoncesuser=annonceColocationService.getuserannonce(user);
+
+    return annoncesuser;
+    }
+    @GetMapping("/stats/reservationPercentage")
+    public ResponseEntity<Map<Long, Float>> getReservationPercentageByAnnonce() {
+        Map<Long, Float> reservationPercentageMap = annonceColocationService.getReservationPercentageByAnnonce();
+        return ResponseEntity.ok().body(reservationPercentageMap);
+    }
+
+
 }

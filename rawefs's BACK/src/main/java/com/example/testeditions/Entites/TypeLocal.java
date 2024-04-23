@@ -1,11 +1,10 @@
 package com.example.testeditions.Entites;
 
 public enum TypeLocal {
-     Studio,
+    Studio,
     Apartment ,
-     House ,
+    House ,
     Duplex ,
-     villa ,
-     cabin
-
+    villa ,
+    cabin
 }

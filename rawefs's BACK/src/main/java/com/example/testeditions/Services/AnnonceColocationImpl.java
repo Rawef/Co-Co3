@@ -38,7 +38,7 @@ public class AnnonceColocationImpl implements AnnonceColocationService{
             existingAnnonce.setTitre(newAnnonce.getTitre());
             existingAnnonce.setDescription(newAnnonce.getDescription());
             existingAnnonce.setAdresse(newAnnonce.getAdresse());
-            existingAnnonce.setNbr_chambres(newAnnonce.getNbr_chambres());
+            existingAnnonce.setNbrChambres(newAnnonce.getNbrChambres());
             existingAnnonce.setSuperficie(newAnnonce.getSuperficie());
             existingAnnonce.setType(newAnnonce.getType());
             existingAnnonce.setStatus(newAnnonce.getStatus());
@@ -68,7 +68,7 @@ public class AnnonceColocationImpl implements AnnonceColocationService{
 
     }
 
-   @Override
+    @Override
     public List<AnnonceColocation> getAnnoncesSelonPreferences(Long userId) {
         User user=userRepository.findById(userId).get();
         List<Preferences> preferences=user.getPreferences();
@@ -88,4 +88,25 @@ public class AnnonceColocationImpl implements AnnonceColocationService{
         }
         return colocationList;
     }
+
+    @Override
+    public List<AnnonceColocation> getuserannonce(User user) {
+        return annonceColocationRepository.findByUser(user);
+    }
+    public Map<Long, Float> getReservationPercentageByAnnonce() {
+        List<AnnonceColocation> annonces = annonceColocationRepository.findAll();
+        Map<Long, Float> reservationPercentageMap = new HashMap<>();
+
+        for (AnnonceColocation annonce : annonces) {
+            int nombreVues = annonce.getNombreVues();
+            int nombreReservations = annonce.getReservationColocs().size();
+            float reservationPercentage = (float) nombreReservations / nombreVues * 100;
+            reservationPercentageMap.put(annonce.getId(), reservationPercentage);
+        }
+
+        return reservationPercentageMap;
+    }
+
+
+
 }
