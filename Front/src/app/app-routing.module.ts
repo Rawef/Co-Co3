@@ -16,6 +16,7 @@ import { AjouterannonceComponent } from './covoiturage/components/ajouterannonce
 import { DetailedAnnonceComponent } from './covoiturage/components/detailed-annonce/detailed-annonce.component';
 import { MesannoncesComponent } from './covoiturage/components/mesannonces/mesannonces.component';
 import { ReservationComponent } from './covoiturage/components/reservation/reservation.component';
+import { StatisticsComponent } from './covoiturage/components/statistics/statistics.component';
 import { DashboardComponent } from './covoiturage/components/dashboard/dashboard.component';
 import { BackannonceComponent } from './covoiturage/components/backannonce/backannonce.component';
 import { BackupdateannonceComponent } from './covoiturage/components/backupdateannonce/backupdateannonce.component';
@@ -27,7 +28,6 @@ import { BackvoitureComponent } from './covoiturage/components/backvoiture/backv
 import { BackupdatevoitureComponent } from './covoiturage/components/backupdatevoiture/backupdatevoiture.component';
 import { BackcommentComponent } from './covoiturage/components/backcomment/backcomment.component';
 import { NotificationComponent } from './covoiturage/components/notification/notification.component';
-import { StatisComponent } from './covoiturage/components/statis/statis.component';
 
 
 const routes: Routes = [
@@ -44,6 +44,7 @@ const routes: Routes = [
   { path: 'annonces/:ida', component: DetailedAnnonceComponent },
   { path: "annonces", component: MesannoncesComponent },
   { path: "mesReservations", component: ReservationComponent },
+  { path: "stat", component: StatisticsComponent },
   { path: "back", component: DashboardComponent },
   { path: "bannonce", component: BackannonceComponent },
   { path: "bupdate/:ida", component: BackupdateannonceComponent },
@@ -55,8 +56,7 @@ const routes: Routes = [
   { path: "buvoiture/:idv", component:BackupdatevoitureComponent},   
   { path: "bcomment", component:BackcommentComponent},                 
   { path: "not", component:NotificationComponent},                    
-  { path: "stat", component:StatisComponent},                    
-
+   
                  
 
 

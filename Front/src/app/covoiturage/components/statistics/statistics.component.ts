@@ -4,10 +4,10 @@ import { Chart, registerables, ChartItem } from 'chart.js';
 
 @Component({
   selector: 'app-statistics',
-  templateUrl: './stat.component.html',
-  styleUrls: ['./stat.component.css']
+  templateUrl: './statistics.component.html',
+  styleUrls: ['./statistics.component.css']
 })
-export class StatComponent implements OnInit {
+export class StatisticsComponent implements OnInit {
   activeCount = 0;
   inactiveCount = 0;
   loading = true;

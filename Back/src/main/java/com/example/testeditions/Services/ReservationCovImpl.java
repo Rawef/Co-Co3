@@ -41,9 +41,11 @@ public class ReservationCovImpl implements ReservationCovService {
 
     @Override
     public ReservationCov createReservation(Long ida, Long userId) {
+        // Retrieve the necessary entities
         AnnonceCov annonceCov = annonceCovRepository.findById(ida).orElse(null);
         User user = userRepository.findById(userId).orElse(null);
 
+        // Validate retrieved entities
         if (annonceCov == null) {
             throw new IllegalArgumentException("Annonce not found with ID: " + ida);
         }
@@ -62,17 +64,21 @@ public class ReservationCovImpl implements ReservationCovService {
         reservation.setAnnonceCov(annonceCov);
         reservation.setReservationTime(new Date());
 
+        // Create a notification for the annonce owner
         Notification notification = new Notification();
-        notification.setUser(annonceCov.getUser());
+        notification.setUser(annonceCov.getUser()); // Owner of the annonce
         notification.setContent("New reservation by " + user.getNom() + " on your annonce '" + annonceCov.getTitre() + "'");
         notification.setTimestamp(new Date());
         notification.set_read(false);
 
+        // Save the notification
         notificationRepository.save(notification);
 
+        // Update the available places in the annonce
         annonceCov.setPlacesDisponibles(annonceCov.getPlacesDisponibles() - 1);
         annonceCovRepository.save(annonceCov);
 
+        // Save the reservation and return it
         return reservationCovRepository.save(reservation);
     }
 

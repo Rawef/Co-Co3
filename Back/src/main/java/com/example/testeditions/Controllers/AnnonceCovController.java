@@ -18,9 +18,7 @@
     import org.springframework.http.ResponseEntity;
     import org.springframework.web.bind.annotation.*;
 
-    import java.time.LocalDate;
     import java.util.List;
-    import java.util.Map;
     import java.util.NoSuchElementException;
     import java.util.Optional;
     import com.twilio.Twilio;
@@ -182,7 +180,12 @@
 
 
 
-
+        @GetMapping(value = "/count", produces = MediaType.APPLICATION_JSON_VALUE)
+        public StatisticDTO getAnnonceStatusCounts() {
+            long activeCount = annonceCovService.countByStatus("ACTIVE");
+            long inactiveCount = annonceCovService.countByStatus("INACTIVE");
+            return new StatisticDTO(activeCount, inactiveCount);
+        }
 
 
         @GetMapping("/updateAnnouncementStatus")
@@ -192,17 +195,9 @@
         }
 
 
-        @GetMapping("/daily-stats")
-        public Map<LocalDate, Long> getDailyAnnonceCounts() {
-            return annonceCovService.getAnnonceCountsPerDay();
-        }
 
-        @GetMapping(value = "/count", produces = MediaType.APPLICATION_JSON_VALUE)
-        public StatisticDTO getAnnonceStatusCounts() {
-            long activeCount = annonceCovService.countByStatus("ACTIVE");
-            long inactiveCount = annonceCovService.countByStatus("INACTIVE");
-            return new StatisticDTO(activeCount, inactiveCount);
-        }
+
+
 
     }
 
