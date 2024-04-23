@@ -1,0 +1,47 @@
+<app-header></app-header>
+
+<form [formGroup]="priceFilterForm" (ngSubmit)="filter()">
+    <label for="minPrice">Min Price:</label>
+    <input type="number" id="minPrice" formControlName="minPrice">
+
+    <label for="maxPrice">Max Price:</label>
+    <input type="number" id="maxPrice" formControlName="maxPrice">
+
+    <label for="type">Type:</label>
+    <select id="type" formControlName="type">
+      <option value="PLAGES">Plages</option>
+      <option value="LUXE">Luxe</option>
+      <option value="ART_CREATIVITE">Art et Créativité</option>
+      <option value="PARCS_NATIONAUX">Parcs Nationaux</option>
+      <option value="ILES">Îles</option>
+    </select>
+    <label for="nbrChambres">Number of Bedrooms:</label>
+    <input type="number" id="nbrChambres" formControlName="nbrChambres">
+    <button type="submit">Filter</button>
+    <button type="button" (click)="resetPriceFilter()">Reset</button>
+  </form>
+
+<section class="cards-wrapper" style="margin-top: 30px;">
+
+    <div class="card-grid-space" *ngFor="let annonce of annonces">
+
+        <a class="card" href="https://codetheweb.blog/2017/10/06/html-syntax/" [routerLink]="'/reservation/' + annonce.id"
+        [style]="'--bg-img: url(assets/images/' + annonce.image + ')'">
+            <div>
+                <h1>{{annonce.titre}}</h1>
+                <div class="description-container">
+                    <p>{{annonce.description}}</p>
+                </div>
+                <div class="date">{{annonce.date_annonce}}</div>
+                <div class="tags">
+                    <div class="tag">{{annonce.prix}}$</div>
+                    <div class="tag">{{annonce.nbr_chambres}} chambres</div>
+
+                </div>
+                <button class="btn-outline-light">book<i class="bi bi-arrow-right"></i></button>
+            </div>
+        </a>
+    </div>
+
+    <!-- https://images.unsplash.com/photo-1520839090488-4a6c211e2f94?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=38951b8650067840307cba514b554ba5&auto=format&fit=crop&w=1350&q=80 -->
+</section>
