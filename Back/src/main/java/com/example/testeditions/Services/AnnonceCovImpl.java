@@ -7,13 +7,11 @@ import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.temporal.ChronoUnit;
-import java.util.Date;
-import java.util.List;
-import java.util.NoSuchElementException;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 public class AnnonceCovImpl implements AnnonceCovService {
@@ -211,9 +209,8 @@ public class AnnonceCovImpl implements AnnonceCovService {
     }
 
 
-    public long countByStatus(String status) {
-        return annonceCovRepository.countByStatus(status);
-    }
+
+
 
     @Override
     public void updateAnnouncementStatus() {
@@ -241,6 +238,27 @@ public class AnnonceCovImpl implements AnnonceCovService {
             LocalDateTime dateDepart = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
             return dateDepart.isBefore(now);
         }
+
+
+
+    @Override
+    public Map<LocalDate, Long> getAnnonceCountsPerDay() {
+        List<Map<String, Object>> rawCounts = annonceCovRepository.countAnnoncesByDay();
+
+        Map<LocalDate, Long> dailyCounts = new HashMap<>();
+        for (Map<String, Object> record : rawCounts) {
+            LocalDate day = (LocalDate) record.get("day");
+            Long count = ((Number) record.get("count")).longValue();
+            dailyCounts.put(day, count);
+        }
+
+        return dailyCounts;
+    }
+
+    @Override
+    public long countByStatus(String status) {
+        return annonceCovRepository.countByStatus(status);
+    }
 
 }
 

@@ -15,56 +15,56 @@ export class StatComponent implements OnInit {
   chart: Chart<'doughnut', number[], unknown> | null = null;
 
   constructor(private annonceService: AnnonceService) {
-    Chart.register(...registerables); // Register Chart.js components
+    Chart.register(...registerables); 
   }
 
   ngOnInit(): void {
-    this.loadStatistics(); // Load statistics on initialization
+    this.loadStatistics(); 
   }
 
   loadStatistics(): void {
     this.annonceService.getStatistics().subscribe(
       (data) => {
-        this.activeCount = data.active_count; // Update active count
-        this.inactiveCount = data.inactive_count; // Update inactive count
+        this.activeCount = data.active_count; 
+        this.inactiveCount = data.inactive_count; 
         this.loading = false;
-        this.initializeChart(); // Initialize the chart after data is loaded
+        this.initializeChart();
       },
       (error) => {
-        this.error = 'Failed to load statistics. Please try again.'; // Set error message
+        this.error = 'Failed to load statistics. Please try again.'; 
         this.loading = false;
       }
     );
   }
 
   initializeChart(): void {
-    setTimeout(() => { // Delay initialization to ensure the canvas is ready
+    setTimeout(() => { 
       const ctx = document.getElementById('statistics-chart') as ChartItem;
-      if (ctx && !this.chart) { // Ensure chart isn't already initialized
+      if (ctx && !this.chart) { 
         this.chart = new Chart<'doughnut', number[], unknown>(ctx, {
-          type: 'doughnut', // Set to donut chart
+          type: 'doughnut', 
           data: {
-            labels: ['Active', 'Inactive'], // Chart labels
+            labels: ['Active', 'Inactive'], 
             datasets: [
               {
-                data: [this.activeCount, this.inactiveCount], // Chart data
-                backgroundColor: ['#4CAF50', '#F44336'], // Colors for active/inactive
-                borderColor: ['#388e3c', '#d32f2f'], // Border colors
-                borderWidth: 1, // Border width
+                data: [this.activeCount, this.inactiveCount], 
+                backgroundColor: ['#4CAF50', '#F44336'], 
+                borderColor: ['#388e3c', '#d32f2f'], 
+                borderWidth: 1, 
               },
             ],
           },
           options: {
-            responsive: true, // Make it responsive
+            responsive: true, 
             plugins: {
               legend: {
-                display: true, // Show legend
-                position: 'top', // Position legend at the top
+                display: true, 
+                position: 'top', 
               },
             },
           },
         });
       }
-    }, 100); // Add a slight delay for initialization
+    }, 100); 
   }
 }

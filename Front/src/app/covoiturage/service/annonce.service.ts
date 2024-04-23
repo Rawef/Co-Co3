@@ -343,6 +343,17 @@ export class AnnonceService {
             })
           );
       }
+
+      getStat(): Observable<any> {
+        const url = `${this.baseUrl}/annonces/daily-stats`; 
+        return this.http.get<any>(url).pipe(
+          tap(response => console.log('Statistics Response:', response)),
+          catchError(error => {
+            console.error('Error fetching statistics:', error);
+            throw error;
+          })
+        );
+    }
       getUserNotifications(userId: number): Observable<Notification[]> {
         return this.http.get<Notification[]>(`${this.baseUrl}/notifications/user/${userId}`);
       }
@@ -350,6 +361,8 @@ export class AnnonceService {
       markAsRead(notificationId: number): Observable<void> {
         return this.http.patch<void>(`${this.baseUrl}/notifications/mark-as-read/${notificationId}`, {});
       }
+
+      
     
 
 
