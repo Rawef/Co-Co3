@@ -16,7 +16,6 @@ import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 import { AboutusModule } from './aboutus/aboutus.module';
 import { AuthConfig, OAuthModule } from 'angular-oauth2-oidc';
 import { BackofficeModule } from './backoffice/backoffice.module';
-import { ColocationModule } from './colocation/colocation.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { MessagesModule } from 'primeng/messages';
 import { ButtonModule } from 'primeng/button';
@@ -57,7 +56,6 @@ const config: SocketIoConfig = { url: 'http://localhost:8089', options: {} };
     LoginModule,
     CommonModule ,
     AboutusModule,
-    ColocationModule,
     BackofficeModule,
     MessagesModule,
     ButtonModule,

@@ -80,6 +80,10 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Certification> certifications;
 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy="user")
+    private List<ReservationColoc> ReservationColocs;
+    @ManyToOne
+    Contract contract;
 
     public boolean isVerified() {
         return verified;
