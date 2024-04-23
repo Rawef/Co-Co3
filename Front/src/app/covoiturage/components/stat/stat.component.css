@@ -1,0 +1,32 @@
+
+.bar-chart .eje-x li:nth-child(7):before {
+  background: #15BFCC;  
+  height: 520%;
+}
+.pie-chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .legend {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+    margin-right: 1em;
+  }
+  
+  .legend-color {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5em;
+    border: 1px solid #000;
+  }
+  
+
+
