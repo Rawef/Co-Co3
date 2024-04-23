@@ -1,0 +1,31 @@
+<app-header></app-header>
+<div class="reservation-container" *ngIf="annonce">
+    <h1 class="reservation-title"><b>{{ annonce.titre }}</b></h1>
+    <img class="reservation-image" [src]="'assets/images/' + annonce.image" alt="Reservation Image">
+    <div class="reservation-info">
+      <p class="reservation-price"><b>Price:</b> ${{ annonce.prix }}</p>
+      <p class="reservation-price"><b>Number of rooms:</b> {{ annonce.nbr_chambres }}</p>
+      <div class="date-picker-container" >
+        <ngb-datepicker #dp (dateSelect)="onDateSelection($event)" [displayMonths]="2" [dayTemplate]="t" outsideDays="hidden" [markDisabled]="markDisabled" />
+
+        <ng-template #t let-date let-focused="focused">
+            <span
+                class="custom-day"
+                [class.focused]="focused"
+                [class.range]="isRange(date)"
+                [class.faded]="isHovered(date) || isInside(date)"
+                (mouseenter)="hoveredDate = date"
+                (mouseleave)="hoveredDate = null"
+            >
+                {{ date.day }}
+            </span>
+        </ng-template>   
+        <hr />
+        <button type="submit"  class="submit-button" (click)="reserver()">Submit</button>
+ 
+     </div>
+    </div>
+  </div>
+  
+  
+  

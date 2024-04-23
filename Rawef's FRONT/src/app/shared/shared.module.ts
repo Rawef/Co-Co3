@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from '../home/component/home/home.component';
+import { HeaderAdminComponent } from './components/header-admin/header-admin.component';
 
 
 
@@ -14,7 +15,7 @@ import { HomeComponent } from '../home/component/home/home.component';
   declarations: [
     HeaderComponent,
     SpinnerComponent,
-    
+    HeaderAdminComponent
   ],
   imports: [
     CommonModule,
@@ -27,8 +28,8 @@ import { HomeComponent } from '../home/component/home/home.component';
   ],
   exports:[
     HeaderComponent,
-    SpinnerComponent,
-    
+    HeaderAdminComponent,
+    SpinnerComponent
   ]
 })
 export class SharedModule { }

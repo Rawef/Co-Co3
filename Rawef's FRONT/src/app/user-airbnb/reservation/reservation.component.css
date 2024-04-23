@@ -1,0 +1,62 @@
+.reservation-container {
+    max-width: 600px; /* Adjust maximum width as needed */
+    margin: 20px auto; /* Center the container */
+    overflow: hidden; /* Ensure image does not overflow container */
+  }
+  
+  .reservation-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .reservation-image {
+    width: 100%;
+    display: block; /* Ensures image takes full width */
+    margin-bottom: 10px; /* Adjust spacing between title and image */
+  }
+  
+  .reservation-info {
+    background-color: #f9f9f9; /* Background color for price and bedrooms */
+    padding: 10px; /* Add padding to the info section */
+  }
+  
+  .reservation-price {
+    font-size: 18px;
+    margin-bottom: 5px; /* Adjust spacing between price and bedrooms */
+  }
+  .custom-day {
+    text-align: center;
+    padding: 0.185rem 0.25rem;
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+}
+.custom-day.focused {
+    background-color: #e6e6e6;
+}
+.custom-day.range,
+.custom-day:hover {
+    background-color: rgb(2, 117, 216);
+    color: white;
+}
+.custom-day.faded {
+    background-color: rgba(2, 117, 216, 0.5);
+}
+
+::ng-deep .ngb-dp-day.disabled {
+  background-color: #f0f0f0; /* Change to your desired color */
+  color: #999 !important; /* Optionally, change the text color */
+}
+
+  
+button {
+  background-color: #008489;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+  

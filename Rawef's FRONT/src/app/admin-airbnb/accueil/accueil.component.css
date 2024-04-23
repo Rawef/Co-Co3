@@ -1428,5 +1428,10 @@ body {
     }
   }
 
+  .panel {
+    width : 90%;
+    height: 50vh;
+  }
+
   
  
