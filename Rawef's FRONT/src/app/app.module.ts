@@ -16,7 +16,6 @@ import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 import { AboutusModule } from './aboutus/aboutus.module';
 import { AuthConfig, OAuthModule } from 'angular-oauth2-oidc';
 import { BackofficeModule } from './backoffice/backoffice.module';
-import { ColocationModule } from './colocation/colocation.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { MessagesModule } from 'primeng/messages';
 import { ButtonModule } from 'primeng/button';
@@ -29,6 +28,11 @@ import { AnnoceColocViewComponent } from './annoceColoc/annoce-coloc-view/annoce
 import { UpdateAnnonceColocComponent } from './annoceColoc/update-annonce-coloc/update-annonce-coloc.component';
 import { RouterModule } from '@angular/router';
 import { CreateReservationColocComponent } from './reservation/create-reservation-coloc/create-reservation-coloc.component';
+import { ForumModule } from './forum/forum.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TinderModule } from './tinder/tinder.module';
+import { ReclamationModule } from './reclamation/reclamation.module';
+
 
 const config: SocketIoConfig = { url: 'http://localhost:8089', options: {} };
 
@@ -57,7 +61,6 @@ const config: SocketIoConfig = { url: 'http://localhost:8089', options: {} };
     LoginModule,
     CommonModule ,
     AboutusModule,
-    ColocationModule,
     BackofficeModule,
     MessagesModule,
     ButtonModule,
@@ -67,7 +70,12 @@ const config: SocketIoConfig = { url: 'http://localhost:8089', options: {} };
     SocketIoModule.forRoot(config),
     ReactiveFormsModule,  // Importez ReactiveFormsModule ici
     RouterModule.forRoot([]), // Configuration de RouterModule dans AppModule
-    RouterModule // Assurez-vous d'importer RouterModule ici
+
+  
+    ReclamationModule,
+    TinderModule,
+    BrowserAnimationsModule,
+
     
     
      
